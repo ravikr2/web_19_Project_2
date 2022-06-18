@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <style>
+    *{
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+    }
+  #nav{
+    width: 100%;
+    height: 80px;
+    background-color:#104b68;
+    border: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+  }
+  #left{
+    width: 300px;
+    border: 1px solid yellow;
+    margin-left: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  #left>img{
+    color: white;
+    width: 60%;
+    cursor: pointer;
+  }
+  #left>select{
+    display: block;
+    margin-left: 20px;
+    cursor: pointer;
+  }
+  #right{
+    margin-right: 30px;
+    width: 600px;
+    border: 1px solid blue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size:20px ;
+  }
+  #right>div>a{
+    text-decoration-line: none;
+    color: white;
+  }
+  select>option{
+    display: block;
+    width: 400px;
+    height: 500px;
+    padding-right: 20px;
+    /* border-radius: 10px; */
+    /* border: 1px solid red; */
+  }
+
+  #img{
+    width: 100%;
+    display: block;
+  }
+  #img>img{
+    margin: auto;
+    width: 90%;
+    height: 500px;
+    display: block;
+  }
+  #fFlex{
+    width: 90%;
+    margin: auto;
+    margin-top: 30px;
+    border: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+  }
+  #fFlex div{
+    width:350px;
+    border: 1px solid grey;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+  }
+  #fFlex img{
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    box-shadow: 10px 10px 5px #ccc;
+      -moz-box-shadow: 10px 10px 5px #ccc;
+      -webkit-box-shadow: 10px 10px 5px #ccc;
+      -khtml-box-shadow: 10px 10px 5px #ccc;
+  }
+  /* Featured offers */
+  #fh1{
+    margin-top: 30px;
+    margin-left: 70px;
+    font-size: 30px;
+    font-weight: bolder;
+  }
+  #sFlex{
+    margin: auto;
+    width: 90%;
+    border: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+  }
+  #sFlex>div{
+    width: 290px;
+    cursor: pointer;
+  }
+  #sFlex img{
+    width: 100%;
+    height: 100%;
+  }
+  #sFlex >div >div{
+    color: white;
+   margin-top: -50px;
+   margin-left: 20px;
+   font-size: 13px;
+  }
+
+
+  /* bigANDsmallImages */
+  #images{
+    margin: auto;
+    margin-top: 40px;
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(2,70% 29%);
+    grid-template-rows: repeat(1,270px);
+    border: 1px solid green;
+    gap: 0px 1%;
+  }
+  #images>div:first-child{
+    border: 1px solid black;
+  }
+  #images>div:first-child img{
+     width: 100%;
+     height: 100%;
+    object-position:0px -130px ;
+      object-fit: cover;
+  }
+  #images>div:last-child img{
+     width: 100%;
+     height: 100%;
+  }
+
+  /* here to help */
+  #sh1{
+    margin-top: 30px;
+    margin-left: 70px;
+    font-weight: 900;
+  }
+  #hereTo{
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  #hereTo>div{
+    width: 350px;
+    height: 70px;
+    border: 1px solid grey;
+    cursor: pointer;
+  }
+  #hereTo>div img{ 
+    width: 5%;
+    margin-left: 80px;
+  }
+  #hereTo>div >p{
+    margin-top: 10px;
+  }
+
+  /* Traveling tips */
+  #travel{
+    margin-top: 30px;
+    margin-left: 70px;
+    font-size: 30px;
+  }
+  #travelbox{
+    margin: auto;
+    margin-top: 30px;
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(1,auto);
+    gap: 0px 30px;
+
+  }
+  #travelbox>div{
+    border: 1px solid red;
+   
+  }
+  #travelbox>div img{
+    width: 100%;
+    height: 250px;
+    position: relative;
+  }
+  .h2{
+    position: absolute;
+    left: 20px;
+  }
+  </style>
+</head>
+<body>
+    <div id="nav">
+         <div id="left">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQvS3WkLg4gd4r_hJzRvEicMTKYWsr484a-Vg-RVQM2sX1ZzrrOISM4JPCkuIVpmF3Kxs&usqp=CAU" alt="">
+             <select name="" id="">
+              <option value="">More travel</option>
+              <option value="Stages">🏢 Stages</option>
+              <option value="Flight" >✈️ Flights</option>
+              <option value="Packeges">🧳 Packages</option>
+              <option value="Car">🚗 Cars</option>
+              <option value="Car">🛳️ Cruisers</option>
+             </select>
+            </div>  
+         <div id="right">
+              <div><a href="">espanol</a></div>
+              <div><a href="">Lisyour Property</a></div>
+              <div><a href="">Support</a></div>
+              <div><a href="">Trips</a></div>
+              <div><a href="">Sign in</a></div>
+         </div>
+    </div>
+    <div id="img">
+       <img src="https://forever.travel-assets.com/flex/flexmanager/images/2021/11/01/ORB_Storefront_6_imgB_1400x600_20211028.jpg?impolicy=fcrop&w=900&h=506&q=mediumHigh" alt="error">
+    </div>
+
+    <!-- firstFlex -->
+
+    <div id="fFlex">
+    <div>
+      <a href="https://www.orbitz.com/lp/lgbtq-gay-travel-hotels?rfrr=call-to-action.undefined.click" target="_blank"><img src="https://forever.travel-assets.com/flex/flexmanager/images/2022/02/09/ORB_BrandPromise_TravelAsYouAre_imgB_840x473_20220207.jpg?impolicy=fcrop&w=900&h=386&q=mediumHigh" alt=""></a>
+    </div>
+    <div>
+      <a href="https://www.orbitz.com/rewards/?rfrr=call-to-action.undefined.click" target="_blank"><img src="https://forever.travel-assets.com/flex/flexmanager/images/2022/02/09/ORB_BrandPromise_Rewards_imgB_840x473_20220207.jpg?impolicy=fcrop&w=900&h=386&q=mediumHigh" alt=""></a>
+    </div>
+    <div>
+      <img src="https://forever.travel-assets.com/flex/flexmanager/images/2022/02/09/ORB_BrandPromise_InsiderPrices_imgB_840x473_20220207.jpg?impolicy=fcrop&w=900&h=386&q=mediumHigh" alt="">
+    </div>
+    </div>
+    <!-- Featured Offers -->
+    <h1 id="fh1">Featured Offers</h1>
+    <div id="sFlex">
+      <div>
+        <img src="https://forever.travel-assets.com/flex/flexmanager/images/2021/11/02/ORB_Storefront_LastMinute_imgB_900x600_20211101.jpg?impolicy=fcrop&w=900&h=600&q=mediumHigh" alt="">
+        <div>
+          <h2>Last-minute deals</h2>
+          <p>Gateaway today</p>
+        </div>
+      </div>
+      <div>
+        <img src="https://forever.travel-assets.com/flex/flexmanager/images/2021/11/02/ORB_Storefront_AllInclusive_imgB_900x600_20211101.jpg?impolicy=fcrop&w=900&h=600&q=mediumHigh" alt="">
+        <div>
+          <h2>All-includes resorts</h2>
+          <p>Enjoy sun and fun</p>
+        </div>
+      </div>
+      <div>
+        <img src="https://forever.travel-assets.com/flex/flexmanager/images/2021/11/02/ORB_Storefront_MOD_imgB_900x600_20211101.jpg?impolicy=fcrop&w=900&h=600&q=mediumHigh" alt="">
+        <div>
+          <h2>Insider prices</h2>
+          <p>Members get rewarded</p>
+        </div>
+      </div>
+      <div>
+        <img src="https://forever.travel-assets.com/flex/flexmanager/images/2021/11/02/ORB_Storefront_JetAndReset_imgB_900x600_20211101.jpg?impolicy=fcrop&w=900&h=600&q=mediumHigh" alt="">
+        <div>
+          <h2>Jet and rest</h2>
+          <p>Fly somewhere beachy and warm</p>
+        </div>
+      </div>
+    </div>
+    <div id="images">
+      <div><a href="https://www.orbitz.com/deals/?rfrr=editorial.Today%27s_top%20deals.click"><img src="https://forever.travel-assets.com/flex/flexmanager/images/2020/12/03/ORB_Storefront_Deals_2740x1484-V1.jpg" alt="error"></a></div>
+      <div><a href="https://adclick.g.doubleclick.net/pcs/click%253Fxai%253DAKAOjsvkaHkb--Z9tFd8sK8GMDIQzNwnHwZAslrR1vZA92rp0qVEVtcU0dEhrfvBHJINfwg29lOiN7x_IXPsi-s_hLbSOkuVyybikZa7PvttTLS-yjQ0ZirKOiAI91MyF4kBH5C1xwSLDC7AosxBc0UvA-RmoaS6SGZA6VGBnuCuSwRcry9z6xjbY0I1LFxanrOu_BAI7_kqjDRaqj7HeonWyReTEYAFhYU_Xmfj74dEIwM5_oMXwB20eyXhdXdrqPYXmmY754cD5WPScAWE53xgvLvMdqD0r6aE_zN5IO0ZKYkdwNZF1qoiCoFzl2gmUw%2526sai%253DAMfl-YSgRsNvW4WJbvqBvoGaZSh8tgCQQAlz8cbvdwaiMBhoxyCrLalJ37MaupwK92jy1Dr2B69988wlh4lfBKmfRa4OW7xEgELuPWPlqWKVvqGYEuou-LGXOtQ6bAa38tKCMGWw4Q%2526sig%253DCg0ArKJSzMDpoh3qI9FJEAE%2526fbs_aeid%253D%255Bgw_fbsaeid%255D%2526urlfix%253D1%2526adurl%253Dhttps://www.orbitz.com/lp/b/ms-b-dmo-orb-us-travel-portland-21"><img src="https://tpc.googlesyndication.com/simgad/15774825149029875339?" alt=""></a></div>
+    </div>
+
+
+    <!-- Here to help -->
+    <h1 id="sh1">Here to help keep you on the move</h1>
+    <div id="hereTo">
+      <div>
+        <h2>Change or cancel a trip <img src="https://forever.travel-assets.com/flex/flexmanager/images/2021/04/08/icon__mode_edit.svg" alt=""> </h2>
+        <p>make update your itenarary or cancel a booking</p>
+      </div>
+      <div><h2>Use a credit or coupon <img src="https://forever.travel-assets.com/flex/flexmanager/images/2021/04/08/icon__monetization_on.svg" alt=""></h2>
+      <p>Apply a coupon code or credit to a new Trips </p>
+      </div>
+      <div><h2>Track your refung <img src="https://forever.travel-assets.com/flex/flexmanager/images/2021/04/08/icon__chat.svg" alt=""></h2>
+      <p>check the status of a refund currently on progress</p>
+      </div>
+    </div>
+
+    <!-- Traveling tips -->
+    <h2 id="travel">Traveling tips</h2>
+    <div id="travelbox">
+      <div>
+       <img src="https://forever.travel-assets.com/flex/flexmanager/images/2021/11/18/ORB_Blog_NationalParks_imgB_1199x399_20211117.jpg" alt="image">
+       <h2>National parks</h2>
+       <!-- <p>There's plenty to busy</p>
+       <button>Learn more</button> -->
+       
+      </div>
+      <div>
+        <img src="https://forever.travel-assets.com/flex/flexmanager/images/2021/11/18/ORB_Blog_RoadTrips_imgB_1199x399_20211117.jpg" alt="image">
+      </div>
+    </div>
+</body>
+</html>
