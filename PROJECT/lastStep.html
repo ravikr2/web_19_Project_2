@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Info - Join Expedia</title>
+    <style>
+         *{
+        background-color: #f3f4f5;
+      }
+        body>div:first-child{
+            width:100%;
+            padding-top:42px;
+            background-color: white;
+         }
+        body>div:first-child>img{
+            height:50px
+           
+         }
+         #container{
+          width:40%;
+          margin: auto;
+          line-height: 30px;
+          margin-top: 100px;
+          height: 700px;
+         }
+         #container>p{
+          font-size: 25px;
+          color: grey;
+         }
+         #container>h1{
+          font-size: 40px;
+         }
+         .form{
+          padding: 20px;
+          width: 85%;
+          font-size: 20px;
+          margin-top: 20px;
+         }
+         .form1{
+          padding: 18px;
+          width: 40%;
+          font-size: 20px;
+          margin-top: 20px;
+         }
+         #next{
+          
+          margin-top: 30px;
+          padding: 20px;
+          width: 90%;
+          font-size: 20px;
+          background-color: blue;
+          color: white;
+          cursor: pointer;;
+         }
+         #para{
+            text-align: center;
+            font-size: 4px;
+            margin-right: 70px;
+            margin-top: 80px;
+         }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="https://apps.expediapartnercentral.com/list/static/images/eg-logo-blue.svg" alt="">
+    </div>
+    <div id="container">
+        <p>Step 3 of 3</p>
+        <h1>One last step!</h1>
+        <form>
+            <input class="form1" id="fname"placeholder="First name" >
+            <input class="form1" id="lname"placeholder="Last name" >
+            <input class="form" type="number" id="phone" placeholder="Phone" >
+            <input class="form" id="mail"placeholder="Email address" >
+            <input type="submit" id="next">
+        </form>
+        <p id="para">By continuing, you agree to allow Expedia to contact you regarding your property registration, including via text message.</p>
+    
+</body>
+</html>
+<script>
+    document.querySelector("form").addEventListener("submit",myFunction);
+    let Arr=JSON.parse(localStorage.getItem("Data"))||[];
+    console.log(Arr)
+    
+
+function myFunction(event){
+  event.preventDefault();
+  let Obj={
+    firstName:document.querySelector("#fname").value,
+    lastName:document.querySelector("#lname").value,
+    phone:document.querySelector("#phone").value,
+    mail:document.querySelector("#mail").value
+  };
+  Arr.push(Obj);
+  localStorage.setItem("Data", JSON.stringify(Arr));
+ 
+  window.location.href="http://127.0.0.1:5500/finalMessage.html"
+}
+
+</script>

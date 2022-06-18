@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Info - Join Expedia</title>
+    <style>
+      *{
+        background-color: #f3f4f5;
+      }
+        body>div:first-child{
+            width:100%;
+            padding-top:42px;
+            background-color: white;
+         }
+        body>div:first-child>img{
+            height:50px
+           
+         }
+         #location{
+          width:40%;
+          margin: auto;
+          
+          margin-top: 100px;
+         }
+         #location>p{
+          font-size: 25px;
+          color: grey;
+         }
+         #location>h1{
+          font-size: 40px;
+         }
+         #address{
+          padding: 20px;
+          width: 90%;
+          font-size: 20px;
+         }
+         #address:hover{
+          border: 3px solid blue;
+         }
+         #next{
+          
+          margin-top: 30px;
+          padding: 20px;
+          width: 96%;
+          font-size: 20px;
+          
+
+         }
+
+    </style>
+</head>
+<body> 
+    <div>
+        <img src="https://apps.expediapartnercentral.com/list/static/images/eg-logo-blue.svg" alt="">
+    </div>
+    <div id="location">
+        <p>Step 1 of 3</p>
+        <h1>Where is your property located?</h1>
+        <form>
+            <input id="address" placeholder="Enter address..."/>
+            
+              <input type="submit" id="next">
+            
+            
+            
+        </form>
+        
+           
+        
+    </div>
+    
+</body>
+
+</html>
+<script>
+      document.querySelector("form").addEventListener("submit",myFunction);
+      let queArr=JSON.parse(localStorage.getItem("queData"))||[];
+      console.log(queArr)
+      
+  
+  function myFunction(event){
+    event.preventDefault();
+    let queObj={
+      queAdress:document.querySelector("#address").value
+    };
+    queArr.push(queObj);
+    localStorage.setItem("queData", JSON.stringify(queArr));
+   
+
+  }
+</script>
+
