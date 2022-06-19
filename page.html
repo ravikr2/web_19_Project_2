@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color:rgb(244, 240, 240);
+        }
+        #navbar{border: 2px solid;
+            display: flex;
+            justify-content: space-between;
+            background-color:rgb(0,37,60);}#opt{display: flex;align-items: center;}#opt>div{
+            padding-right: 30px;
+            color: aliceblue; }
+        #search{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px;}#search>div{ margin: 20px;}input{
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            border: 2px solid antiquewhite;
+            height: 30px;
+        }
+        #content{
+            display: grid;
+            grid-template-columns:  repeat(3,auto);
+            grid-template-rows: repeat(2,100px);
+            margin: 30px 100px 30px 100px;
+            gap: 20px;
+        }
+        #content>div{
+            padding: 20px;
+        }
+     
+        #stays>div{
+            display:grid ;
+            grid-template-columns: repeat(2,auto);
+            gap: 0px 20px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            margin: 50px;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+        }  #stays>div>div>img{
+            width: 300px;
+            height: 220px;
+        }
+        
+
+     </style>
+</head>
+<body>
+    <div id="navbar";>
+     <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHxUGGQXm0vjjDNKDycOVzXOXvU9f_UVrAGJOPM4ahwIImS-ZlnmVNU3x4onMV0HJSpnU&usqp=CAU" alt=""; style="height:60px; padding: 5px; "></div>
+     <div id="opt">
+        <div> List your property</div>
+        <div>Support</div>
+        <div>Trips</div>
+        <div>Sign in</div>
+     </div>
+    </div>
+    <div id="search">
+        
+        <div>
+            <label for="date">Going to</label>
+            <br>
+            <input type="text">
+        </div>
+        <div>
+            <label for="date">Check-in</label>
+            <br>
+            <input type="date">
+        </div>
+        
+        <div>
+            <label for="date">Check-out</label>
+            <br>
+            <input type="date">
+        </div>
+        <div>
+            <label for="date">No. of travellers</label>
+            <br>
+            <input type="number">
+        </div>
+        <div><button style="padding: 10px; border: 0px; border-radius: 5px; font-size: 20px; color:whitesmoke; background-color: rgb(200,50,89);">Search</button></div>
+    </div>
+    <div id="content">
+        <div>
+             <label for="input"><h3>Search by property name</h3></label>
+             <input type="text"> <button style="padding: 10px; border: 0px; border-radius: 5px; font-size: 12px; color:whitesmoke; background-color: rgb(200,50,89);">Search</button>
+        </div>
+        <div id="stays"></div>
+        <div><img src="https://tpc.googlesyndication.com/simgad/17193743292603108542" alt=""></div>
+
+    </div>
+    
+    
+</body>
+</html>
+<script>
+  let  dataObj=[
+        {name:"Bristol Palace Hotel",
+         image:"https://a.travel-assets.com/media/meso_cm/PAPI/Images/hotels/1000000/10000/2600/2575/f7c20c26_b.jpg",
+        details:"Fully refundable reserve now or pay later.",
+        ratings:"4.4/5 Ratings",
+        price:"$199"},{
+            name:"Best Western Plus City Hotel",
+            image:"https://images.trvl-media.com/hotels/1000000/850000/848400/848348/d0d07df0.jpg?impolicy=resizecrop&rw=455&ra=fit",
+            details:"Located in goa with  luxirous facilities at cheapest price",
+            ratings:"4.5/5 Ratings",
+            price:"$114"},
+        {name:"Melia Genova" ,
+         image:"https://a.travel-assets.com/media/meso_cm/PAPI/Images/hotels/1000000/10000/7400/7354/49a5aed0_b.jpg " ,
+        details:" Hotel Banquote at the heart of Genoa",
+        ratings:"4.6/5 Ratings",
+        price:"$226 "},{name:"Marriot Hotel At Genova " ,
+         image:" https://a.travel-assets.com/media/meso_cm/PAPI/Images/hotels/1000000/910000/908400/908326/3b5ede8b_b.jpg" ,
+        details:" Dedicated to sevices like AC lounge, Delicious food, Comfy rooms, 24*7 room service",
+        ratings:"4.1/5 Ratings",
+        price:"$162"},{name:"Tower Genova Airport Hotel " ,
+         image:"https://images.trvl-media.com/hotels/1000000/30000/21000/20923/e8fa1812.jpg?impolicy=resizecrop&rw=455&ra=fit " ,
+        details:"A World-class facility hotel just 1km away from Genova airport",
+        ratings:"3.8/5 Ratings",
+        price:"$ 130"},{name:"Leo! Entire Apartment for exclusive use" ,
+         image:" https://images.trvl-media.com/hotels/70000000/69790000/69789800/69789734/a9223a40.jpg?impolicy=resizecrop&rw=455&ra=fit" ,
+        details:"Entire Home for rent 5 sleeps, 2 bedrooms, Hall, Kitchen ",
+        ratings:"5/5 Ratings",
+        price:"$79"},]
+
+    dataObj.forEach(function(elem){
+        let card=document.createElement("div");
+        let hotelView=document.createElement("div");
+        let view=document.createElement("img");
+
+        view.setAttribute("src",elem.image);
+        
+        let hotelDetails=document.createElement("div")
+        let lab=document.createElement("label");
+        lab.innerText="Price"
+        let price=document.createElement("h2")
+        price.innerText=("Price"+ " "+elem.price)
+        let hoName= document.createElement("h3");
+        hoName.innerText=elem.name
+        let hoRatings=document.createElement("b");
+        hoRatings.innerText=elem.ratings;
+
+        let space=document.createElement("br");
+        
+        let hoDet=document.createElement("p")
+        hoDet.innerText=elem.details;
+         
+        hotelDetails.append(hoName,hoDet,hoRatings,space,price);
+        hotelView.append(view);
+        card.append(hotelView,hotelDetails);
+        document.querySelector("#stays").append(card);
+        
+    })
+    
+</script>
