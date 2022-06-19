@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Info - Join Expedia</title>
+    <style>
+        *{
+            text-decoration: dashed;
+            background-color: #fefefe;
+        }
+        body>div:first-child{
+            width:100%;
+            background-color: white;
+            padding: 10px;
+         }
+        body>div:first-child>img{
+          height:30px;
+          padding-top: 10px;
+          padding-left: 10px;
+          background-color: white;
+           
+         }
+        #container{
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: 50% 40%;
+            gap: 30px;
+            height:500px;
+            
+         }
+         
+        
+        #container>div:first-child>img{
+            width: 100%;
+            height: 80%;
+            border-bottom-right-radius: 50%;
+        }
+        #container>div:last-child>img{
+            width: 30%;
+            margin-top: 20px;
+        }
+        #container>div:last-child>p{
+            font-size: 18px;
+        }
+        #box{
+            width:110%;
+            height: 65%;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            border-radius: 30px;
+        }
+        #box>h1{
+            font-size: 30px;
+            color:#0000a6;
+            padding: 30px;
+            margin-left: 20px;
+        }
+        #anchor{
+            display: grid;
+            grid-template-columns: 40% 40%;
+            justify-content: space-evenly;
+            margin-top: -50px;
+            
+           
+        }
+        .a-box{
+            margin: 10px;
+            border: 3px solid #5252ff ;
+            height: 150px;
+            text-align: center;
+            padding-top: 60px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            border-radius: 30px;
+            line-height: 18px;
+        }
+        .a-box>img{
+            height: 40px;
+        }
+        .a-box>h1{
+            font-size: 20px;
+            color: black;
+            
+        }
+        .a-box>p{
+            color: grey;
+            font-size: 18px;
+        
+        }
+        #para{
+            padding-top:50px;
+            width: 60%;
+            margin: auto;
+            text-align: center;
+        }
+        #para>h1{
+            font-size: 30px;
+        }
+        #para>p{
+            font-size: 20px;
+        }
+        #guests{
+            padding-top: 50px;
+            margin: auto;
+            width: 80%;
+            
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(1,300px);
+            justify-content: space-evenly;
+            gap:80px;
+            text-align: center;
+        }
+        #guests>div>img{
+            width:30%;
+        }
+        #guests>div>h2{
+            font-size: 25px;
+
+        }
+        #guests>div>p{
+            font-size: 18px;
+            text-align: center;
+        }
+       
+
+        .general{
+            text-align: center;
+            margin-top: 50px;
+            font-size: 25px;
+        }
+        #logo{
+            margin: auto;
+            width:90%;
+            display: grid;
+            grid-template-columns: repeat(8,1fr);
+            grid-template-rows: repeat(1,100px);
+            margin-top: 30px;
+            gap: 20px;
+        }
+        #logo>div>img{
+           height: 100px;
+           width: 80%;
+        }
+        #normal{
+            text-align: center;
+            font-size: 20px;
+        }
+        .ex{
+            width:60%;
+            font-size: 20px;
+            text-align: center;
+            margin: auto;
+
+        }
+        #explore{
+            margin: auto;
+            width: 70%;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: 400px;
+            
+            margin-top: 100px;
+            text-align: center;
+        }
+        #explore>div:first-child>img{
+            padding-top:14px ;
+        }
+        #explore>div>img{
+            width:150px;
+            
+        }
+        #explore>div>h1{
+            padding-top: 50px;
+            font-size: 20px;
+        }
+        #explore>div>p{
+            font-size: 20px;
+        }
+        #ready{
+            height:300px;
+            width: 100%;
+            background-color: #eff1f3;
+            margin-top: 50px;
+        }
+        #ready>div{
+            width: 40%;
+            height: 70%;
+            margin: auto;
+            padding-top: 50px;
+            text-align: center;
+            background-color: #eff1f3;
+        }
+        #ready>div>h1{
+            font-size: 25px;
+            background-color: #eff1f3;
+        }
+        #ready>div>p{
+            font-size: 18px;
+            background-color: #eff1f3;
+
+        }
+        #ready>div>div{
+            width: 25%;
+            margin: auto;
+            
+        }
+        #ready>div>div>a{
+            margin: auto;
+           background-color: #0000a6;
+        }
+        #ready>div>div>a>p{
+            padding: 10px;
+            font-size: 18px;
+            background-color: #0000a6;
+            color: white;
+            width: 100%;
+            margin: auto;
+            display: block;
+
+        }
+
+</style>
+</head>
+<body>
+    <div>
+        <img src="https://apps.expediapartnercentral.com/list/static/images/eg-logo-blue.svg" alt="">
+    </div>
+    <div id="container">
+        <div>
+        <img src="https://blog.tortugabackpacks.com/wp-content/uploads/2022/05/2022-03-TPP-BEST-OLIVER-03-OF-20-vs-edited-1-1024x681.jpg" alt="">
+    </div>
+    <div>
+        <img src="https://apps.expediapartnercentral.com/list/static/images/Orbitz.svg" alt="">
+        <p>Reach the guests you want—those who truly value your property—with Expedia Group. Signing up is free, fast, and easy.</p>
+    <div id="box">
+        <h1>What would you like to list?</h1>
+        <div id="anchor">
+        <a href="propertyAddress.html">
+            <div class="a-box">
+                <img src="https://apps.expediapartnercentral.com/list/static/images/Lodging.svg" alt="">
+            
+            <h1>Lodging</h1>
+            <p>A hotel, motel, or bed and breakfast</p>
+            </div>
+        </a>
+        <a href="">
+            <div class="a-box">
+                <img src="https://apps.expediapartnercentral.com/list/static/images/PrivateResidence.svg" alt="">
+            
+            <h1>Private residence</h1>
+            <p>A private home, apartment, or vacation home</p>
+            </div>
+        </a>
+        </div>
+
+    </div>
+    </div>
+    </div>
+    <div id="para">
+        <h1>Bring the right guests within reach</h1>
+        <p>Connect with millions of people whose purpose, taste and budget make your property the perfect place to stay.</p>
+    </div>
+    <div id="guests">
+        <div>
+            <img src="https://headless.expediagroup.com/content/dam/marketing/headless/site-assets/icons/icon-world-travelers.png" alt="">
+            <h2>Access a world of travelers</h2>
+            <p>From long-range planners to last-minute bookers, bring travelers to your door from around the world.</p>
+        </div>
+        <div>
+            <img src="https://headless.expediagroup.com/content/dam/marketing/headless/site-assets/icons/icon-ideal-guests.png" alt="">
+            <h2>Attract your ideal guests</h2>
+            <p>Book your ideal guests—travelers who delight in what you provide and want to return again and again.</p>
+        </div>
+        <div>
+            <img src="https://headless.expediagroup.com/content/dam/marketing/headless/site-assets/icons/icons-grow-business.png" alt="">
+            <h2>Grow your business</h2>
+            <p>Make decisions based on real-time data, be more competitive & help increase visibility and bookings.</p>
+        </div>
+    
+         
+    </div>
+    <h1 class="general">Orbitz is a member of the Expedia Group marketplace of travel brands</h1>
+    <div id="logo">
+        <div>
+            <img src="https://headless.expediagroup.com/content/dam/marketing/headless/site-assets/logos/Expedia%20logo.svg" alt="">
+        </div>
+        <div>
+            <img src="https://headless.expediagroup.com/content/dam/marketing/headless/site-assets/logos/H.com%20logo.svg" alt="">
+        </div>
+        <div>
+            <img src="https://headless.expediagroup.com/content/dam/marketing/headless/site-assets/logos/Vrbo%20logo.svg" alt="">
+        </div>
+        <div>
+            <img src="https://headless.expediagroup.com/content/dam/marketing/headless/site-assets/logos/Travelocity%20logo.svg" alt="">
+        </div>
+        <div>
+            <img src="https://headless.expediagroup.com/content/dam/marketing/headless/site-assets/logos/Hotwire%20logo.svg" alt="">
+        </div>
+        <div>
+            <img src="https://headless.expediagroup.com/content/dam/marketing/headless/site-assets/logos/orbitz%20logo.svg" alt="">
+        </div>
+        <div>
+            <img src="https://headless.expediagroup.com/content/dam/marketing/headless/site-assets/logos/ebookers%20logo.svg" alt="">
+        </div>
+        <div>
+            <img src="https://headless.expediagroup.com/content/dam/marketing/headless/site-assets/logos/CheapTickets%20logo.svg" alt="">
+        </div>
+
+    </div>
+    <p id="normal">…and many more</p>
+    
+        <h1 class="general">Explore the benefits of working with us</h1>
+        <p class="ex">For over 25 years, we’ve learned what travelers seek, what makes properties attractive, and how to bring the two together. Discover how this helps you.</p>
+        <div id="explore">
+            <div>
+                <img src="https://headless.expediagroup.com/content/dam/marketing/headless/site-assets/icons/icons-lodging.png" alt="">
+                <h1>Lodging</h1>
+                <p>Confidently fill your rooms so you can do more of what you love—creating wonderful guest experiences</p>
+            </div>
+            <div>
+                <img src="https://headless.expediagroup.com/content/dam/marketing/headless/site-assets/icons/icons-private-residence.png" alt="">
+                <h1>Private residence</h1>
+                <p>Rent your property your way. Set pricing, availability, rules, policies and more to fit your needs</p>
+            </div>
+
+    </div>
+    <div id="ready">
+        <div>
+            <h1>Ready to get started?</h1>
+            <p>Join us today and unlock access to high-value guests.</p>
+            <div>
+                <a href="">
+                    <p>List your property</p>
+                </a>
+            </div>
+            <p>Already a partner with Expedia Group?</p>
+        </div>
+    </div>
+</body>
+</html>

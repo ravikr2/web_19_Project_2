@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Info - Join Expedia</title>
+    <style>
+         *{
+        background-color: #f3f4f5;
+      }
+         body>div:first-child{
+            width:100%;
+            background-color: white;
+            padding: 10px;
+         }
+        body>div:first-child>img{
+            height:30px;
+            padding-top: 10px;
+            padding-left: 10px;
+            background-color: white;
+           
+         }
+         #container{
+            width: 35%;
+            height:1000px;
+            margin: auto;
+            margin-top: 50px;
+            line-height: 12px;
+         }
+         #container>p{
+          font-size: 18px;
+          color: grey;
+         }
+         p+h1{
+            font-size: 30px;
+         }
+         .form{
+          padding: 10px;
+          width: 95%;
+          font-size: 20px;
+        margin-top: 30px;
+         }
+         .form1{
+          padding: 10px;
+          width: 100%;
+          font-size: 20px;
+        margin-top: 30px;
+         }
+         .tag{
+            margin-top:30px;
+            font-size: 20px;
+         }
+         #next{
+          
+          margin-top: 30px;
+          padding: 10px;
+          width: 100%;
+          font-size: 20px;
+          background-color: blue;
+          color: white;
+          cursor: pointer;
+         }
+         #chain{
+            font-size: 20px;
+
+         }
+         #manager{
+            font-size: 20px; 
+         }
+
+         
+        
+            
+         
+    </style>
+</head>
+<body>
+    <div>
+        <img src="https://apps.expediapartnercentral.com/list/static/images/eg-logo-blue.svg" alt="">
+    </div>
+    <div id="container">
+        <p>Step 2 of 3</p>
+        <h1>Tell us a little about your property</h1>
+        <form>
+            <input class="form" id="name" placeholder="Property name">
+        <select class="form1" id="type">
+            <option>Property type</option>
+            <option >Apartment</option>
+            <option >Bed and breakfast</option>
+            <option >Guest house</option>
+            <option >Hostel</option>
+            <option >Hotel</option>
+            <option >Villa</option>
+            <option >Cabin</option>
+            <option >Cottage</option>
+            <option >Cruise</option>
+            <option >House boat</option>
+            <option >Lodge</option>
+            <option >Motel</option>
+            <option >All-Inclusive</option>
+        </select>
+        <input class="form" id="total" type="number" placeholder="Number of rooms/units">
+        <select class="form1" id="currency">
+            <option>Currency</option>
+            <option >India Rupees</option>
+            <option >Euros</option>
+            <option >British Pounds Sterling</option>
+            <option >US dollars</option>
+        </select>
+        <p class="tag">Does this property work with a channel manager?</p>
+        <select  id="manager">
+            <option >Yes</option>
+            <option >No</option>
+            </select>
+        <p class="tag">Is this property part of a chain?</p>
+        <select  id="chain">
+            <option >Yes</option>
+            <option >No</option>
+            </select>
+        <input type="submit" id="next">
+        </form>
+    </div>
+
+</body>
+</html>
+<script>
+    document.querySelector("form").addEventListener("submit",myFunction);
+    let Arr=JSON.parse(localStorage.getItem("Data"))||[];
+    console.log(Arr)
+    
+
+function myFunction(event){
+  event.preventDefault();
+  let Obj={
+    PropertyName:document.querySelector("#name").value,
+    PropertyType:document.querySelector("#type").value,
+    NoOfRooms:document.querySelector("#total").value,
+    Currency:document.querySelector("#currency").value,
+    ChannelManager:document.querySelector("#manager").value,
+    PartOfChain:document.querySelector("#chain").value,
+    };
+  Arr.push(Obj);
+  localStorage.setItem("Data", JSON.stringify(Arr));
+ 
+ 
+  window.location.href="lastStep.html";
+}
+
+</script>
