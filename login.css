@@ -1,0 +1,304 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#Navbar{
+width: 100%;
+height: 60px;
+border: 0px;
+box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+display: flex;
+margin-bottom: 25px;
+}
+#Navbar>a>span{
+    width: 30px;
+    height: 30px;
+    margin-top: 14px;
+    margin-left: 12px;
+
+}
+#Navbar>img:nth-child(2){
+    margin: auto;
+    width: 10%;
+}
+#LoginBox{
+    width: 30%;
+    height: 800px;
+    
+    margin: auto;
+}
+#LoginBox>div:nth-child(1){
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+#LoginBox>div:nth-child(2)>input{
+    width: 100%;
+    height: 50px;
+    margin-bottom: 15px;
+    padding-left: 10px;
+    font-size: 17px;
+    
+
+
+
+    
+}
+
+i{
+    margin-left: -40px;
+    cursor: pointer;
+
+}
+    
+   
+#LoginBox>div:nth-child(3){
+    width: 100%;
+    font-size: 15px;
+    text-align: justify;
+    margin-bottom: 10px;
+}
+#LoginBox>div:nth-child(4)>button{
+    width: 100%;
+    height: 50px;
+    margin-bottom: 15px;
+    padding-left: 10px;
+    font-size: 17px;
+    background-color: #ebb6c4;
+    color:black;
+    border: none;
+
+}
+#LoginBox>div:nth-child(4)>button:hover{
+    background-color:#c83259 ;
+    color: white;
+}
+#LoginBox>div:nth-child(5){
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 15px;
+    
+}
+#LoginBox>div:nth-child(6){
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 15px;
+    
+}
+#LoginBox>div:nth-child(7){
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 15px;
+    margin-top: 50px;
+    
+}
+#LoginBox>div:nth-child(8){
+    display: flex;
+    justify-content: center;
+
+    
+}
+#LoginBox>div:nth-child(8)>img{
+    width: 20px;
+    height: 20px;
+    margin: 10px;
+}
+@media all and  (max-width:767px){
+    #Navbar{
+        width: 100%;
+        height: 60px;
+        border: 0px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        display: flex;
+        margin-bottom: 25px;
+        }
+        #Navbar>a>span{
+            width: 30px;
+            height: 30px;
+            margin-top: 12px;
+            margin-left: 12px;
+        
+        }
+        #Navbar>img:nth-child(2){
+            margin: auto;
+            width: 10%;
+        }
+        #LoginBox{
+            width: 80%;
+            height: 800px;
+            
+            margin: auto;
+        }
+        #LoginBox>div:nth-child(1){
+            font-size: 30px;
+            font-weight: bold;
+            margin-top: 0px;
+            margin-bottom: 20px;
+        }
+        #LoginBox>div:nth-child(2)>input{
+            width: 100%;
+            height: 50px;
+            margin-bottom: 15px;
+            padding-left: 10px;
+            font-size: 17px;
+        
+        
+            
+        }
+        i{
+            margin-left: -40px;
+            cursor: pointer;
+        }
+        #LoginBox>div:nth-child(3){
+            width: 100%;
+            font-size: 15px;
+            text-align: justify;
+            margin-bottom: 10px;
+        }
+        #LoginBox>div:nth-child(4)>button{
+            width: 100%;
+            height: 50px;
+            margin-bottom: 15px;
+            padding-left: 10px;
+            font-size: 17px;
+            background-color: #ebb6c4;
+            color: black;
+            border: none;
+        
+        }
+        #LoginBox>div:nth-child(4)>button:hover{
+            background-color:#c83259 ;
+            color: white;
+        }
+        #LoginBox>div:nth-child(5){
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 15px;
+            
+        }
+        #LoginBox>div:nth-child(6){
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 15px;
+            
+        }
+        #LoginBox>div:nth-child(7){
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 15px;
+            margin-top: 50px;
+            
+        }
+        #LoginBox>div:nth-child(8){
+            display: flex;
+            justify-content: center;
+        
+            
+        }
+        #LoginBox>div:nth-child(8)>img{
+            width: 20px;
+            height: 20px;
+            margin: 10px;
+        }  
+}
+@media all and (min-width:768px) and (max-width:1023px){
+    #Navbar{
+        width: 100%;
+        height: 60px;
+        border: 0px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        display: flex;
+        margin-bottom: 25px;
+        }
+        #Navbar>a>span{
+            width: 30px;
+            height: 30px;
+            margin-top: 12px;
+            margin-left: 12px;
+        
+        }
+        #Navbar>img:nth-child(2){
+            margin: auto;
+            width: 10%;
+        }
+        #LoginBox{
+            width: 50%;
+            height: 800px;
+            
+            margin: auto;
+        }
+        #LoginBox>div:nth-child(1){
+            font-size: 30px;
+            font-weight: bold;
+            margin-top: 0px;
+            margin-bottom: 20px;
+        }
+        #LoginBox>div:nth-child(2)>input{
+            width: 100%;
+            height: 50px;
+            margin-bottom: 15px;
+            padding-left: 10px;
+            font-size: 17px;
+        
+        
+            
+        }
+        i{
+            margin-left: -40px;
+            cursor: pointer;
+        }
+        #LoginBox>div:nth-child(3){
+            width: 100%;
+            font-size: 15px;
+            text-align: justify;
+            margin-bottom: 10px;
+        }
+        #LoginBox>div:nth-child(4)>button{
+            width: 100%;
+            height: 50px;
+            margin-bottom: 15px;
+            padding-left: 10px;
+            font-size: 17px;
+            background-color: #ebb6c4;
+            color: black;
+            border: none;
+        
+        }
+        #LoginBox>div:nth-child(4)>button:hover{
+            background-color:#c83259 ;
+            color: white;
+        }
+        #LoginBox>div:nth-child(5){
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 15px;
+            
+        }
+        #LoginBox>div:nth-child(6){
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 15px;
+            
+        }
+        #LoginBox>div:nth-child(7){
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 15px;
+            margin-top: 50px;
+            
+        }
+        #LoginBox>div:nth-child(8){
+            display: flex;
+            justify-content: center;
+        
+            
+        }
+        #LoginBox>div:nth-child(8)>img{
+            width: 20px;
+            height: 20px;
+            margin: 10px;
+        } 
+}
+
