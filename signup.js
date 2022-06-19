@@ -12,6 +12,7 @@ form.addEventListener("submit",function(event){
     if(checkEmail(data.email)===true){
         userdata.push(data);
         localStorage.setItem("userdata",JSON.stringify(userdata));
+        window.location.href = "index.html";
     }else{
         alert("Email already registered!!")
     }

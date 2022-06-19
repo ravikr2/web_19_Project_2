@@ -10,7 +10,8 @@ form.addEventListener("submit",function(event){
    } 
    if(checkSignin(data.email,data.password)===true){
     localStorage.setItem("loggedInData",JSON.stringify(data));
-    alert("Sign in Successful")
+    alert("Sign in Successful");
+    window.location.href = "index.html";
    }else{
     alert("Invalid username or password");
    }
